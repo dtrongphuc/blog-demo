@@ -1,0 +1,79 @@
+// variables;
+$navbar-height: 52px;
+$navbar-bg-color: transparent;
+$banner-height: 300px;
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+small {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+ul {
+	margin-bottom: 0;
+}
+
+// Navbar
+.navbar {
+	height: $navbar-height;
+	background-color: $navbar-bg-color;
+	border-bottom: 1px solid #bababa;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+
+.menu-title {
+	color: white;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.menu li a {
+	color: white;
+	font-size: 15px;
+	font-weight: 400;
+	text-transform: capitalize;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+// Banner
+.banner {
+	position: relative;
+	width: 100%;
+}
+
+.banner-fullscreen {
+	background-image: url('https://picsum.photos/id/1033/2500/1200');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: $banner-height;
+	width: 100%;
+}
+
+.banner-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	text-transform: Uppercase;
+	letter-spacing: 0.3rem;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+	color: white;
+	font-size: 32px;
+	z-index: 90;
+
+	user-select: none;
+}
