@@ -38,6 +38,7 @@ ul {
 	left: 0;
 	right: 0;
 	z-index: 100;
+	transition: all ease 400ms;
 }
 
 .menu-title {
@@ -55,6 +56,10 @@ ul {
 	&:hover {
 		text-decoration: none;
 	}
+}
+
+.onScroll {
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 // Banner
