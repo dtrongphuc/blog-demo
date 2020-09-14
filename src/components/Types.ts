@@ -1,5 +1,3 @@
-export interface IProps {}
-
 export interface IPost {
 	title: string;
 	author: string;
@@ -10,10 +8,4 @@ export interface IPost {
 
 export interface IPosts {
 	posts?: Array<IPost>;
-}
-export interface IFormValue {
-	title: string;
-	author: string;
-	body: string;
-	url: string;
 }
