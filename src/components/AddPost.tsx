@@ -37,9 +37,8 @@ export default function AddPost() {
 					<label htmlFor='post-body' className='form-label'>
 						post body
 					</label>
-					<input
+					<textarea
 						required
-						type='text'
 						name='post-body'
 						id='post-body'
 						className='form-input'

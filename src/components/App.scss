@@ -180,12 +180,16 @@ ul {
 
 	&-input {
 		height: 40px;
-		padding: 0 8px;
+		padding: 4px 8px;
 
 		&::placeholder {
 			font-weight: 500;
 		}
 	}
+}
+
+#post-body {
+	min-height: 54px;
 }
 
 .btn {
