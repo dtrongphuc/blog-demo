@@ -5,18 +5,16 @@ export default function Nav() {
 		<div className='navbar'>
 			<div className='navbar-top'>
 				<div className='navbar-left'>
-					<ul className='menu'>
-						<li>
-							<a href=''>React Blog</a>
+					<ul className='menu d-flex align-items-center'>
+						<li className='mr-4 menu-title'>React Blog</li>
+						<li className='mr-4'>
+							<a href='/'>One</a>
 						</li>
-						<li>
-							<a href=''>One</a>
+						<li className='mr-4'>
+							<a href='/'>Two</a>
 						</li>
-						<li>
-							<a href=''>Two</a>
-						</li>
-						<li>
-							<a href=''>Three</a>
+						<li className='mr-4'>
+							<a href='/'>Three</a>
 						</li>
 					</ul>
 				</div>
