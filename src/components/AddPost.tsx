@@ -1,8 +1,23 @@
 import React from 'react';
+import { IFormValue } from './Types';
 
-const handleSubmit = (e: any): void => {};
+export default function AddPost({
+	handleNewPost,
+}: {
+	handleNewPost: (value: IFormValue) => void;
+}) {
+	const handleSubmit = (e: any): void => {
+		e.preventDefault();
+		const formValue = {
+			title: e.target?.title?.value,
+			author: e.target?.author?.value,
+			body: e.target['post-body']?.value,
+			url: e.target['image-url']?.value,
+		};
+		handleNewPost(formValue);
+		console.log(formValue);
+	};
 
-export default function AddPost() {
 	return (
 		<div className='add-post'>
 			<h3 className='add-post__title'>add a post to the react blog</h3>
