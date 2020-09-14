@@ -4,6 +4,10 @@ $navbar-bg-color: transparent;
 $banner-height: 300px;
 $post-bottom-height: 48px;
 
+html {
+	box-sizing: border-box;
+}
+
 html,
 body,
 h1,
@@ -98,10 +102,6 @@ ul {
 	position: relative;
 	margin-top: 40px;
 
-	&-center {
-		margin: 0 4rem;
-	}
-
 	&-header {
 		display: flex;
 		align-items: flex-end;
@@ -109,6 +109,7 @@ ul {
 		margin-bottom: 16px;
 
 		& h1 {
+			font-size: 26px;
 			color: #282828;
 		}
 
@@ -145,4 +146,50 @@ ul {
 			text-decoration: none;
 		}
 	}
+}
+
+// Add post
+.add-post {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: #f9f9f9;
+	border-radius: 4px;
+	margin-top: 40px;
+	padding: 20px;
+
+	&__title {
+		margin-bottom: 16px;
+		text-transform: uppercase;
+		color: #0f8787;
+		font-size: 26px;
+		text-align: center;
+	}
+}
+
+.form {
+	&-label {
+		font-size: 15px;
+		font-weight: 600;
+		text-transform: capitalize;
+	}
+
+	&-group {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&-input {
+		height: 40px;
+		padding: 0 8px;
+
+		&::placeholder {
+			font-weight: 500;
+		}
+	}
+}
+
+.btn {
+	background-color: #0f8787;
+	color: #fff;
+	padding: 8px 40px;
 }

@@ -4,6 +4,8 @@ import * as _ from 'lodash';
 import Nav from './Nav';
 import Banner from './Banner';
 import Post from './Post';
+import AddPost from './AddPost';
+
 import './App.scss';
 
 const handleScroll = (e: any): void => {
@@ -18,7 +20,13 @@ const handleScroll = (e: any): void => {
 
 export default class App extends React.Component {
 	componentDidMount() {
-		window.addEventListener('scroll', _.throttle(handleScroll, 1000), true);
+		window.addEventListener('scroll', _.throttle(handleScroll, 400), true);
+	}
+
+	UNSAFE_componentWillMount() {
+		window.removeEventListener('scroll', () =>
+			console.log('remove scroll event')
+		);
 	}
 
 	render() {
@@ -27,7 +35,14 @@ export default class App extends React.Component {
 				<Nav />
 				<Banner />
 				<div className='main'>
-					<Post />
+					<div className='container'>
+						<div className='row'>
+							<div className='col-12'>
+								<AddPost />
+							</div>
+							<Post />
+						</div>
+					</div>
 				</div>
 			</div>
 		);
